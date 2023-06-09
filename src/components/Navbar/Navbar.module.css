@@ -1,0 +1,29 @@
+.nav{
+    grid-area: nav;
+    background-color: cornflowerblue;
+    padding: 20px;
+}
+.item a{
+  color: white;
+  text-decoration: none;
+}
+.item a.activeLink{
+  color:gold;
+}
+.itemFriend a{
+  color: white;
+  text-decoration: none;
+}
+.itemFriend{
+  text-align: center;
+  font-weight: bold;
+}
+.friendName{
+  display: inline-block;
+  margin: 4px;
+  text-align: center;
+}
+.friendName a{ 
+  color: white;
+  text-decoration: none;
+}
