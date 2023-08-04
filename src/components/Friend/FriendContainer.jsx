@@ -2,9 +2,8 @@ import { follow, unfollow, toggleFollowingProgress, getUsers } from "../../redux
 import { connect } from 'react-redux';
 import Friend from './Friend';
 import React from 'react';
+import {getAllUsersSuperSelector, getPageSize, getTotalUsersCount, getCurrentPage, getIsFetching, getFollowingInProgress} from "../../redux/userSelectors";
 import Preloadre from "../common/Preloader/Preloader";
-
-
 
 class FriendContainer extends React.Component {
     componentDidMount() {
@@ -31,12 +30,12 @@ class FriendContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: state.friendPage.users,
-        pageSize: state.friendPage.pageSize,
-        totalUsersCount: state.friendPage.totalUsersCount,
-        currentPage: state.friendPage.currentPage,
-        isFetching: state.friendPage.isFetching,
-        followingInProgress: state.friendPage.followingInProgress
+        users: getAllUsersSuperSelector(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: getTotalUsersCount(state),
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state)
     }
 }
 // let mapDispatchToProps = (dispatch) => {

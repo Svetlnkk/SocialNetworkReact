@@ -1,3 +1,13 @@
 .descriptionBlock{
     padding:10px;
 }
+.userPhoto{
+    width:250px;
+    height:250px;
+}
+.contact{
+    padding-left: 10px;
+}
+.editPhoto{
+    background: "grey";
+}
